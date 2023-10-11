@@ -1,1 +1,4 @@
-
+tr,td{
+    border: 4px;
+    border-style: solid;
+}
