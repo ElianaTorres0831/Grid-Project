@@ -1,5 +1,34 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>RosLiana's Grid Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="addR()">Add Row</button>
+    <button onclick="addC()">Add Col</button>
+    <button onclick="removeR()">Remove Row</button>
+    <button onclick="removeC()">Remove Col</button>
+    <button onclick="fillU()">Fill All Uncolored</button>
+    <button onclick="fillAll()">Fill All</button>
+    <button onclick="clearAll()">Clear</button>
+    <select onchange="selectColor()" id="selectedColorId">
+        <option value="SELECT">SELECT</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+    </select>
+   
+    <table id="grid">
+    </table>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
 
 <head>
     <title> Welcome to Our <strong>Grid Maker</strong>!</title>
