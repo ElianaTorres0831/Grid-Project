@@ -61,48 +61,39 @@ function removeC() {
     }
 
 }
-
-let numRows = 0;
-let numCols = 0;
-let colorSelected; 
-
-// Add a row
-function addR() {
-    let newRow = document.getElementById("");
-}
-
-// Add a column
-function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
-}
-
-// Remove a row
-function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
-}
-
-// Remove a column
-function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
-}
-
-// Set global variable for selected color
 function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
+    return colorSelected;
 }
-
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+   // alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+   let grid = document.getElementById("grid");
+   grid = grid.getElementsByTagName("td");
+   for (let i = 0; i < grid.length; i++)
+   {
+        if(grid[i].style.backgroundColor == "")
+        {
+            grid[i].style.backgroundColor = colorSelected;
+        }
+   }
+   
 }
-
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
-}
+    // alert("Clicked Fill All"); // Replace this line with your code.
+    let grid = document.getElementById("grid");
+    grid = grid.getElementsByTagName("td");
+    for (let i = 0; i < grid.length; i++)
+    {
+        grid[i].style.backgroundColor = colorSelected;
+    }
 
+}
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    //alert("Clicked Clear All"); // Replace this line with your code.
+    let removeAll = document.getElementById("grid");
+    removeAll.innerHTML = "";
 }
